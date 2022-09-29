@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>PhotoShop</title>
+</head>
+<body class="h-screen flex items-center bg-black">
+    <div class="card w-[1400px] h-[650px]  bg-orange-600 m-auto">
+        <div class="categori w-[95%] h-[100px] flex m-auto justify-between  bg-white mb-[1px]">
+            <div id="brightnessBtn" class="sun w-[10%] h-[100%]  border-2 flex items-center justify-center hover:cursor-pointer">
+                <b class="text-[25px] text-center">
+                    <i class="fas fa-sun"></i><br>
+                    bright
+                </b>
+            </div>
+            <div id="blurBtn" class="sun w-[10%] h-[100%]  border-2 flex items-center justify-center hover:cursor-pointer">
+                <b class="text-[25px] text-center">
+                    <i class="fas fa-droplet"></i><br>
+                    blur
+                </b>
+            </div>
+            <div id="contrastBtn" class="sun w-[10%] h-[100%]  border-2 flex items-center justify-center hover:cursor-pointer">
+                <b class="text-[25px] text-center">
+                    <i class="fas fa-circle-half-stroke"></i><br>
+                    contrast
+                </b>
+            </div>
+            <div id="grayscaleBtn" class="sun w-[10%] h-[100%]  border-2 flex items-center justify-center hover:cursor-pointer">
+                <b class="text-[25px] text-center">
+                    grayscale
+                </b>
+            </div>
+            <div id="hue-rotateBtn" class="sun w-[10%] h-[100%]  border-2 flex items-center justify-center hover:cursor-pointer">
+                <b class="text-[25px] text-center">
+                    hue-rotate
+                </b>
+            </div>
+            <div id="invertBtn" class="sun w-[10%] h-[100%]  border-2 flex items-center justify-center hover:cursor-pointer"> 
+                <b class="text-[25px] text-center">
+                    invert
+                </b>
+            </div>
+            <div id="opacityBtn" class="sun w-[10%] h-[100%]  border-2 flex items-center justify-center hover:cursor-pointer">
+                <b class="text-[25px] text-center">
+                    opacity
+                </b>
+            </div>
+            <div id="saturateBtn" class="sun w-[10%] h-[100%]  border-2 flex items-center justify-center hover:cursor-pointer">
+                <b class="text-[25px] text-center">
+                    saturate
+                </b>
+            </div>
+            <div id="sepiaBtn" class="sun w-[10%] h-[100%]  border-2 flex items-center justify-center hover:cursor-pointer">
+                <b class="text-[25px] text-center">
+                    sepia
+                </b>
+            </div>
+        </div>
+        <div class="tools mb-[40px] ">
+            <div id="brightness" class=" w-[95%] h-[100px] m-auto bg-white hidden justify-center items-center">
+                <form action="" id="brightnessForm">
+                    <input id="brightnessValue" class="w-[400px] h-[60px] bg-black rounded-lg text-slate-50 indent-[30px] text-[22px]"  type="number" placeholder="brightness value..." autofocus>
+                    <button class="w-[200px] h-[60px] bg-violet-900 rounded-lg text-slate-50 text-[22px]">Use</button>
+                </form>
+            </div>
+            <div id="blur" class=" w-[95%] h-[100px] m-auto bg-white hidden justify-center items-center">
+                <form action="" id="blurForm">
+                    <input id="blurValue" class="w-[400px] h-[60px] bg-black rounded-lg text-slate-50 indent-[30px] text-[22px]"  type="number" placeholder="blur value..." autofocus>
+                    <button class="w-[200px] h-[60px] bg-violet-900 rounded-lg text-slate-50 text-[22px]">Use</button>
+                </form>
+            </div>
+            <div id="contrast" class=" w-[95%] h-[100px] m-auto bg-white hidden justify-center items-center">
+                <form action="" id="contrastForm">
+                    <input id="contrastValue" class="w-[400px] h-[60px] bg-black rounded-lg text-slate-50 indent-[30px] text-[22px]"  type="number" placeholder="contrast value..." autofocus>
+                    <button class="w-[200px] h-[60px] bg-violet-900 rounded-lg text-slate-50 text-[22px]">Use</button>
+                </form>
+            </div>
+            <div id="grayscale" class=" w-[95%] h-[100px] m-auto bg-white hidden justify-center items-center">
+                <form action="" id="grayscaleForm">
+                    <input id="grayscaleValue" class="w-[400px] h-[60px] bg-black rounded-lg text-slate-50 indent-[30px] text-[22px]"  type="number" placeholder="grayscale value..." autofocus>
+                    <button class="w-[200px] h-[60px] bg-violet-900 rounded-lg text-slate-50 text-[22px]">Use</button>
+                </form>
+            </div>
+            <div id="hue-rotate" class=" w-[95%] h-[100px] m-auto bg-white hidden justify-center items-center">
+                <form action="" id="huerotateForm">
+                    <input id="huerotateValue" class="w-[400px] h-[60px] bg-black rounded-lg text-slate-50 indent-[30px] text-[22px]"  type="number" placeholder="hue-rotate value... deg" autofocus>
+                    <button class="w-[200px] h-[60px] bg-violet-900 rounded-lg text-slate-50 text-[22px]">Use</button>
+                </form>
+            </div>
+            <div id="invert" class=" w-[95%] h-[100px] m-auto bg-white hidden justify-center items-center">
+                <form action="" id="invertForm">
+                    <input id="invertValue" class="w-[400px] h-[60px] bg-black rounded-lg text-slate-50 indent-[30px] text-[22px]"  type="number" placeholder="invert value..." autofocus>
+                    <button class="w-[200px] h-[60px] bg-violet-900 rounded-lg text-slate-50 text-[22px]">Use</button>
+                </form>
+            </div>
+            <div id="opacity" class=" w-[95%] h-[100px] m-auto bg-white hidden justify-center items-center">
+                <form action="" id="opacityForm">
+                    <input id="opacityValue" class="w-[400px] h-[60px] bg-black rounded-lg text-slate-50 indent-[30px] text-[22px]"  type="number" placeholder="opacity value.." autofocus>
+                    <button class="w-[200px] h-[60px] bg-violet-900 rounded-lg text-slate-50 text-[22px]">Use</button>
+                </form>
+            </div>
+            <div id="saturate" class=" w-[95%] h-[100px] m-auto bg-white hidden justify-center items-center">
+                <form action="" id="saturateForm">
+                    <input id="saturateValue" class="w-[400px] h-[60px] bg-black rounded-lg text-slate-50 indent-[30px] text-[22px]"  type="number" placeholder="saturate value..." autofocus>
+                    <button class="w-[200px] h-[60px] bg-violet-900 rounded-lg text-slate-50 text-[22px]">Use</button>
+                </form>
+            </div>
+            <div id="sepia"  class=" w-[95%] h-[100px] m-auto bg-white hidden justify-center items-center">
+                <form action="" id="sepiaForm">
+                    <input id="sepiaValue" class="w-[400px] h-[60px] bg-black rounded-lg text-slate-50 indent-[30px] text-[22px]"  type="number" placeholder="sepia value..." autofocus>
+                    <button class="w-[200px] h-[60px] bg-violet-900 rounded-lg text-slate-50 text-[22px]">Use</button>
+                </form>
+            </div>
+        </div>  
+        <div class="img">
+            <div id="selectedBanner"></div>
+            <div class="form-group">    
+              <input type="file" class="form-control" name="image" id="img" accept="image/png, image/gif, image/jpeg" />
+            </div>
+        </div>
+    </div>
+
+<script src="js/app.js"></script>
+
+<script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+></script>
+    <script>
+      var selDiv = "";
+      var storedFiles = [];
+      $(document).ready(function () {
+        $("#img").on("change", handleFileSelect);
+        selDiv = $("#selectedBanner");
+      });
+
+      function handleFileSelect(e) {
+        var files = e.target.files;
+        var filesArr = Array.prototype.slice.call(files);
+        filesArr.forEach(function (f) {
+          if (!f.type.match("image.*")) {
+            return;
+          }
+          storedFiles.push(f);
+
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            var html =
+              '<img id="imgEl" src="' +
+              e.target.result +
+              "\" data-file='" +
+              f.name +
+              "alt='Category Image' height='200px' width='200px'>";
+            selDiv.html(html);
+          };
+          reader.readAsDataURL(f);
+        });
+      }
+    </script>
+</body>
+</html>
